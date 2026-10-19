@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIXAL.ARTIST</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: #f5e8c8;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(ellipse at 50% 0%, #23466b 0%, transparent 60%),
+        linear-gradient(160deg, #071426, #102944 55%, #091626);
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .65;
+      background-image:
+        radial-gradient(circle, #f4dca0 1px, transparent 1.5px),
+        radial-gradient(circle, #b8d5ec 1px, transparent 1.5px);
+      background-size: 83px 91px, 127px 119px;
+      background-position: 10px 20px, 45px 65px;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      padding: 25px 18px;
+      text-align: center;
+      border-bottom: 1px solid #b99a60;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: clamp(30px, 7vw, 54px);
+      letter-spacing: 5px;
+      color: #f1d69b;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: #c2c9d5;
+    }
+
+    .map {
+      width: min(92%, 760px);
+      margin: 30px auto;
+      padding: 32px 18px;
+      text-align: center;
+      border: 1px solid #a88c5b;
+      outline: 1px solid #a88c5b;
+      outline-offset: 5px;
+      background: linear-gradient(
+        135deg,
+        rgba(22, 48, 70, .8),
+        rgba(8, 22, 39, .88)
+      );
+    }
+
+    .compass {
+      color: #d8b878;
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-weight: normal;
+      letter-spacing: 3px;
+      color: #f1d69b;
+    }
+
+    .intro {
+      max-width: 460px;
+      margin: 14px auto 30px;
+      color: #d5dce6;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .places {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .place {
+      display: block;
+      padding: 23px 12px;
+      color: #f5e8c8;
+      text-decoration: none;
+      border: 1px solid #8d794f;
+      background: rgba(19, 43, 64, .65);
+      transition: background .2s, border-color .2s;
+    }
+
+    .place:hover {
+      background: rgba(60, 86, 107, .65);
+      border-color: #f1d69b;
+    }
+
+    .symbol {
+      display: block;
+      font-size: 27px;
+      margin-bottom: 12px;
+      color: #e4c47f;
+    }
+
+    .place strong {
+      display: block;
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-weight: normal;
+    }
+
+    .place small {
+      display: block;
+      margin-top: 9px;
+      color: #b9c8d8;
+      line-height: 1.5;
+    }
+
+    .section {
+      width: min(92%, 700px);
+      margin: 25px auto;
+      padding: 24px;
+      border-top: 1px solid #8d794f;
+      text-align: center;
+      scroll-margin-top: 20px;
+    }
+
+    .section p {
+      color: #d5dce6;
+      line-height: 1.8;
+    }
+
+    .back {
+      color: #e4c47f;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 24px 12px;
+      text-align: center;
+      border-top: 1px solid #8d794f;
+      color: #b9c8d8;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stars"></div>
+
+  <header>
+    <h1 class="brand">MIXAL.ARTIST</h1>
+    <div class="subtitle">A MAP OF ART & IDEAS</div>
+  </header>
+
+  <main>
+    <section class="map">
+      <div class="compass">✧</div>
+      <h2>THE ARTIST'S ATLAS</h2>
+
+      <p class="intro">
+        Every work has a story.
+        Every idea leads somewhere.
+        Explore the different destinations of my art.
+      </p>
+
+      <nav class="places">
+        <a class="place" href="#graduation">
+          <span class="symbol">✳</span>
+          <strong>GRADUATION PROJECT</strong>
+          <small>The story, the process and the artwork</small>
+        </a>
+
+        <a class="place" href="#academic">
+          <span class="symbol">⌘</span>
+          <strong>ACADEMIC PORTFOLIO</strong>
+          <small>A selection of academic art projects</small>
+        </a>
+
+        <a class="place" href="#full">
+          <span class="symbol">✧</span>
+          <strong>FULL PORTFOLIO</strong>
+          <small>A wider collection of my artwork</small>
+        </a>
+      </nav>
+    </section>
+
+    <section class="section" id="graduation">
+      <h2>GRADUATION PROJECT</h2>
+      <p>
+        Discover the concept, inspiration, making process
+        and final presentation of my graduation project.
+      </p>
+      <a class="back" href="#">↑ Return to the map</a>
+    </section>
+
+    <section class="section" id="academic">
+      <h2>ACADEMIC PORTFOLIO</h2>
+      <p>
+        A curated collection of selected works for
+        academic applications and artistic development.
+      </p>
+      <a class="back" href="#">↑ Return to the map</a>
+    </section>
+
+    <section class="section" id="full">
+      <h2>FULL PORTFOLIO</h2>
+      <p>
+        A growing collection of artworks, experiments
+        and creative projects.
+      </p>
+      <a class="back" href="#">↑ Return to the map</a>
+    </section>
+  </main>
+
+  <footer>
+    MIXAL.ARTIST · AN ATLAS OF CREATIVITY
+  </footer>
+</body>
+</html>
